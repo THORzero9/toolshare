@@ -7,10 +7,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
 fun SustainabilityScreen(viewModel: SustainabilityViewModel = hiltViewModel()) {
+
+
+@Composable
+fun SustainabilityScreen() {
+
     Column(
         modifier = Modifier
             .fillMaxSize()

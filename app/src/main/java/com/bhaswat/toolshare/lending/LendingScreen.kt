@@ -6,10 +6,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
 fun LendingScreen(viewModel: LendingViewModel = hiltViewModel()) {
+
+
+@Composable
+fun LendingScreen() {
+
     var toolName by remember { mutableStateOf("") }
     var toolDescription by remember { mutableStateOf("") }
     var available by remember { mutableStateOf(true) }

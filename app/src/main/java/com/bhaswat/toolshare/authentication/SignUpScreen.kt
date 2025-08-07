@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 
@@ -15,6 +16,12 @@ fun SignUpScreen(
     navController: NavController,
     viewModel: SignUpViewModel = hiltViewModel()
 ) {
+
+import androidx.navigation.NavController
+
+@Composable
+fun SignUpScreen(navController: NavController) {
+
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }

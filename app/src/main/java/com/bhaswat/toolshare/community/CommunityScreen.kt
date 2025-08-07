@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bhaswat.toolshare.data.models.Tool
 
@@ -19,6 +20,16 @@ fun CommunityScreen(viewModel: CommunityViewModel = hiltViewModel()) {
         Tool("Screwdriver", "A set of screwdrivers.", "Jane Doe", "hand-tools", "good", true, emptyList(), com.bhaswat.toolshare.data.models.Location(0.0, 0.0)),
         Tool("Drill", "A powerful drill.", "Peter Jones", "power-tools", "new", false, emptyList(), com.bhaswat.toolshare.data.models.Location(0.0, 0.0)),
         Tool("Wrench", "A versatile wrench.", "Mary Smith", "hand-tools", "fair", true, emptyList(), com.bhaswat.toolshare.data.models.Location(0.0, 0.0))
+
+
+@Composable
+fun CommunityScreen() {
+    val tools = listOf(
+        Tool("Hammer", "A sturdy hammer for all your needs.", "John Doe", true),
+        Tool("Screwdriver", "A set of screwdrivers.", "Jane Doe", true),
+        Tool("Drill", "A powerful drill.", "Peter Jones", false),
+        Tool("Wrench", "A versatile wrench.", "Mary Smith", true)
+
     )
 
     LazyColumn(
@@ -43,7 +54,11 @@ fun ToolCard(tool: Tool) {
             Text(tool.name, style = MaterialTheme.typography.headlineSmall)
             Text(tool.description, style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(8.dp))
+
             Text("Owner: ${tool.ownerId}", style = MaterialTheme.typography.bodySmall)
+
+            Text("Owner: ${tool.owner}", style = MaterialTheme.typography.bodySmall)
+
             Text(
                 if (tool.available) "Available" else "Not Available",
                 style = MaterialTheme.typography.bodySmall

@@ -15,11 +15,18 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bhaswat.toolshare.R
 
 @Composable
 fun ProfileScreen(viewModel: ProfileViewModel = hiltViewModel()) {
+
+import com.bhaswat.toolshare.R
+
+@Composable
+fun ProfileScreen() {
+
     Column(
         modifier = Modifier
             .fillMaxSize()

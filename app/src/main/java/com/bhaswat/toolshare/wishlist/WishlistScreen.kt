@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bhaswat.toolshare.community.ToolCard
 import com.bhaswat.toolshare.data.models.Tool
@@ -17,6 +18,16 @@ fun WishlistScreen(viewModel: WishlistViewModel = hiltViewModel()) {
     val tools = listOf(
         Tool("Drill", "A powerful drill.", "Peter Jones", "power-tools", "new", false, emptyList(), com.bhaswat.toolshare.data.models.Location(0.0, 0.0)),
         Tool("Wrench", "A versatile wrench.", "Mary Smith", "hand-tools", "fair", true, emptyList(), com.bhaswat.toolshare.data.models.Location(0.0, 0.0))
+
+import com.bhaswat.toolshare.community.Tool
+import com.bhaswat.toolshare.community.ToolCard
+
+@Composable
+fun WishlistScreen() {
+    val tools = listOf(
+        Tool("Drill", "A powerful drill.", "Peter Jones", false),
+        Tool("Wrench", "A versatile wrench.", "Mary Smith", true)
+
     )
 
     LazyColumn(
