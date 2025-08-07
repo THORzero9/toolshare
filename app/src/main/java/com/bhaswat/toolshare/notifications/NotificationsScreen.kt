@@ -15,8 +15,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+import androidx.hilt.navigation.compose.hiltViewModel
+
+@Composable
+fun NotificationsScreen(viewModel: NotificationsViewModel = hiltViewModel()) {
+
+
 @Composable
 fun NotificationsScreen() {
+
     val notifications = listOf(
         "Your request for a hammer has been approved.",
         "You have a new request for your drill.",

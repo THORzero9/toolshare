@@ -1,0 +1,10 @@
+package com.bhaswat.toolshare.sustainability
+
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class SustainabilityViewModel @Inject constructor() : ViewModel() {
+    // TODO: Implement sustainability screen logic
+}
